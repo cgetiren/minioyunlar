@@ -398,7 +398,7 @@ footer a:hover { text-decoration: underline; }
 
 /* DİL SEÇME MENÜSÜ STİLLERİ */
 .language-selector {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1100;
@@ -435,6 +435,46 @@ footer a:hover { text-decoration: underline; }
 #lang-dropdown a:hover {
     background-color: var(--primary-color);
 }
+/* style.css */
+
 .flag-icon {
-    font-size: 1.2em;
+    width: 20px;
+    height: 30px; /* Genişliğe göre orantılı bir yükseklik */
+    display: inline-block; /* SVG'nin doğru hizalanması için */
+    vertical-align: middle;
+    margin-right: 3px; /* Bayrak ve yazı arasına hafif boşluk */
+}
+
+.flag-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block; /* İçindeki boşlukları kaldırır */
+    border-radius: 2px; /* SVG'nin köşelerini hafif yuvarla */
+}
+
+
+/* --- MOBİL UYUMLULUK AYARLARI --- */
+
+/* 450px'den dar ekranlar için */
+@media (max-width: 450px) {
+    /* Kör Sıralama oyununu 2 sütunlu yap */
+    #game1-area {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .slot-container {
+        /* Numaralandırmayı daha okunaklı yap */
+        font-size: 1em;
+    }
+    .slot {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+
+    /* Farkı Bul oyununda kareleri küçült */
+    .diff-box {
+        width: 35px;
+        height: 35px;
+    }
 }
