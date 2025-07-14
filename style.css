@@ -467,11 +467,14 @@ footer a:hover { text-decoration: underline; }
 /* --- MOBİL UYUMLULUK AYARLARI --- */
 
 /* 450px'den dar ekranlar için */
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     /* Kör Sıralama oyununu 2 sütunlu yap */
     #game1-area {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+        grid-template-rows: repeat(5, 1fr);    /* 5 satır */
+        grid-auto-flow: column;                /* <<< SİHİR BURADA: Önce sütunları doldur */
+        height: 350px;                         /* Alanın yüksekliğini ayarla */
+        max-width: 200px;                      /* Genişliği daralt */
     }
     .slot-container {
         /* Numaralandırmayı daha okunaklı yap */

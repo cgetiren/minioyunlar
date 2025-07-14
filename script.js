@@ -996,6 +996,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // YENİ: KENDİ AKICI KAYDIRMA FONKSİYONUMUZ
+        function smoothScrollTo(element, duration) {
+            const targetPosition = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 2) + (element.clientHeight / 2);
+            const startPosition = window.scrollY;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = Math.min(1, timeElapsed / duration); // 0 ile 1 arası ilerleme
+                // Yavaş başlayıp yavaş biten "easeInOut" efekti
+                const ease = 0.5 * (1 - Math.cos(Math.PI * run));
+                window.scrollTo(0, startPosition + distance * ease);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+            requestAnimationFrame(animation);
+        }
+
         // 4. YENİ: PAYLAŞ BUTONLARI
     document.querySelectorAll('.share-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -1020,26 +1039,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. YENİ: SAYFA YÜKLENDİĞİNDE URL KONTROLÜ
+    // 5. YENİ: SAYFA YÜKLENDİĞİNDE URL KONTROLÜ (GÜNCELLENDİ)
     function checkUrlForGame() {
-        if (window.location.hash) {
-            const gameId = window.location.hash.substring(1); // # işaretini kaldır
-            const gameCard = document.getElementById(gameId);
-            
-            if (gameCard) {
-                // Kartın olduğu yere smooth scroll yap
-                gameCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (window.location.hash && window.location.hash.startsWith('#card-game')) {
+                const gameId = window.location.hash.substring(1);
+                const gameCard = document.getElementById(gameId);
                 
-                // Kaydırma bitince oyunu odak modunda aç
-                setTimeout(() => {
-                    openModal(gameCard);
-                }, 700); // 700ms scroll animasyonu için bekleme süresi
+                if (gameCard) {
+                    // Kendi akıcı kaydırma fonksiyonumuzu çağırıyoruz
+                    // 1000 milisaniye (1 saniye) sürecek bir animasyon
+                    const scrollDuration = 1000;
+                    smoothScrollTo(gameCard, scrollDuration);
+
+                    // Kaydırma bittikten sonra odak modunu aç
+                    setTimeout(() => {
+                        openModal(gameCard);
+                    }, scrollDuration + 100); // Kaydırma süresinden biraz sonra
+                }
             }
         }
-    }
     
-    // Sayfa ilk yüklendiğinde kontrol et
-    checkUrlForGame();
+    // Sayfa tamamen yüklendikten biraz sonra çalıştırarak daha akıcı bir başlangıç sağla
+    setTimeout(() => {
+        checkUrlForGame();
+    }, 100);
 
         // Ana Buton Sesleri
         document.querySelectorAll('button').forEach(button => {
