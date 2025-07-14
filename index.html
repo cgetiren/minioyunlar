@@ -45,29 +45,44 @@
         <!-- OYUN 1: KÖR SIRALAMA -->
         <div id="card-game1" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <h2 data-lang-key="game1_title">1. Kör Sıralama</h2><p class="description" data-lang-key="game1_desc">1-50 arası 10 sayıyı, küçükten büyüğe sırala. Yeni gelen sayı hiçbir yere sığmazsa kaybedersin!</p><div id="game1-game-container" class="game-area"><p> <span data-lang-key="next_number">Sıradaki Sayı:   </span><b id="game1-next-number" style="font-size: 2em;">?</b></p><div id="game1-area"></div></div><p id="game1-message" class="message"></p><div class="button-container"><button id="game1-start" data-lang-key="start_btn">Başla</button><button id="game1-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 2: BÜYÜK MÜ, KÜÇÜK MÜ? -->
         <div id="card-game2" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game2_title">2. Büyük mü, Küçük mü?</h2><p class="description" data-lang-key="game2_desc">Sıradaki sayının (1-50 arası) ekrandaki sayıdan büyük mü küçük mü olduğunu tahmin et.</p><div id="game2-game-container" class="game-area"><p> <span data-lang-key="score">Skor:</span><b id="game2-score">0</b></p><div class="number-display" id="game2-number">?</div><div id="game2-buttons"><button id="game2-higher" disabled data-lang-key="game2_btn_higher">Büyük</button><button id="game2-lower" disabled data-lang-key="game2_btn_lower">Küçük</button></div></div><p id="game2-message" class="message"></p><div class="button-container"><button id="game2-start" data-lang-key="start_btn">Başla</button><button id="game2-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 3: RENK AVI -->
         <div id="card-game3" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game3_title">3. Renk Avı</h2><p class="description" data-lang-key="game3_desc">Hedef renkteki kutuya olabildiğince hızlı tıkla! Ama dikkat et, yazının rengi seni yanıltabilir!</p><div id="game3-game-container" class="game-area"><p> <span data-lang-key="score">Skor:</span><b id="game3-score">0</b><span data-lang-key="time3">  | Süre: </span> <b id="game3-timer">30</b>s</p><div id="game3-target-text" style="font-weight: bold;" ><span data-lang-key="game3_target">Hedef: </span> <b id="game3-target-color-name">?</b></div><div id="game3-area"></div></div><p id="game3-message" class="message"></p><div class="button-container"><button id="game3-start" data-lang-key="start_btn">Başla</button><button id="game3-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 4: HIZLI TIKLAMA (CPS) -->
         <div id="card-game4" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game4_title">4. Hızlı Tıklama (CPS)</h2><p class="description" data-lang-key="game4_desc">10 saniye içinde kırmızı alana olabildiğince çok tıkla! Saniyedeki tıklama sayın (CPS) ölçülecek.</p><div id="game4-game-container" class="game-area"><p><span data-lang-key="time">Süre:</span> <b id="game4-timer">10.00</b><span data-lang-key="clicks4"> | Tıklama:</span> <b id="game4-clicks">0</b></p><div id="game4-click-area" data-lang-key="game4_click_to_start">Başlamak için tıkla</div></div><p id="game4-message" class="message"></p><div class="button-container"><button id="game4-start" data-lang-key="start_btn">Başla</button><button id="game4-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 5: HEDEF VURMA -->
         <div id="card-game5" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game5_title">5. Hedef Vurma</h2><p class="description" data-lang-key="game5_desc">30 saniye içinde ekranda rastgele beliren kırmızı hedefleri vurmaya çalış. Her vuruş 1 puan!</p><div id="game5-game-container" class="game-area"><p><span data-lang-key="time">Süre:</span> <b id="game5-timer">30</b><span data-lang-key="score5">  | Skor: </span> <b id="game5-score">0</b></p><div id="game5-play-area"><div id="game5-target" class="hidden"></div></div></div><p id="game5-message" class="message"></p><div class="button-container"><button id="game5-start" data-lang-key="start_btn">Başla</button><button id="game5-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
@@ -79,59 +94,89 @@
         <!-- OYUN 7: SAYI HAFIZASI -->
         <div id="card-game7" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game7_title">7. Sayı Hafızası</h2><p class="description" data-lang-key="game7_desc">Ekranda beliren sayı dizisini aklında tutup tuş takımından doğru sırayla gir. Bakalım kaç basamağı hatırlayacaksın?</p><div id="game7-game-container" class="game-area"><p> <span data-lang-key="level">Seviye:</span> <b id="game7-level">1</b></p><div id="game7-display"></div><div id="game7-keypad"></div></div><p id="game7-message" class="message"></p><div class="button-container"><button id="game7-start" data-lang-key="start_btn">Başla</button><button id="game7-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 8: FARKI BUL -->
         <div id="card-game8" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game8_title">8. Farkı Bul</h2><p class="description" data-lang-key="game8_desc">Kareler arasındaki tek farklı renkteki kareyi bul. Her turda daha da zorlaşacak!</p><div id="game8-game-container" class="game-area"><p><span data-lang-key="level">Seviye:</span><b id="game8-level">1</b><span data-lang-key="score5">| Skor:</span> <b id="game8-score">0</b></p><div id="game8-board"></div></div><p id="game8-message" class="message"></p><div class="button-container"><button id="game8-start" data-lang-key="start_btn">Başla</button><button id="game8-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 9: SIRALI TIKLAMA -->
         <div id="card-game9" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game9_title">9. Sıralı Tıklama</h2><p class="description" data-lang-key="game9_desc">Ekranda beliren sayıları 1'den 12'ye kadar doğru sırayla olabildiğince hızlı tıkla. Süren ölçülecek (düşük olan iyidir).</p><div id="game9-game-container" class="game-area"><p><span data-lang-key="next_up">Sıradaki:</span> <b id="game9-next-num">1</b><span data-lang-key="time3"> | Süre:</span>  <b id="game9-timer">0.0</b>s</p><div id="game9-board"></div></div><p id="game9-message" class="message"></p><div class="button-container"><button id="game9-start" data-lang-key="start_btn">Başla</button><button id="game9-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 10: TAŞ-KAĞIT-MAKAS -->
         <div id="card-game10" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <h2 data-lang-key="game10_title">10. Taş-Kağıt-Makas</h2><p class="description" data-lang-key="game10_desc">Bilgisayara karşı oyna. 5 puana ilk ulaşan kazanır. Skor farkı liderlik tablosuna yazılır.</p><div id="game10-game-container" class="game-area"><p><span data-lang-key="score10">Skor: Sen </span><b id="game10-player-score">0</b> - <b id="game10-cpu-score">0</b><span data-lang-key="cpu"> Bilgisayar</span> </p><div id="game10-display"><div class="player-choice" id="game10-player-choice"></div><div class="cpu-choice-container"><div id="game10-cpu-choice"><div class="choice-face choice-front">❓</div><div class="choice-face choice-back"></div></div></div></div><div id="game10-choices"><button class="choice-btn" data-choice="taş" disabled>✊</button><button class="choice-btn" data-choice="kağıt" disabled>✋</button><button class="choice-btn" data-choice="makas" disabled>✌️</button></div><p id="game10-results"></p></div><p id="game10-message" class="message"></p><div class="button-container"><button id="game10-start" data-lang-key="start_btn">Başla</button><button id="game10-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
 
         <!-- OYUN 11: RENK HAFIZASI -->
         <div id="card-game11" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game11_title">11. Renk Hafızası</h2><p class="description" data-lang-key="game11_desc">Oyunun gösterdiği renk sırasını aklında tut ve tekrarla. Bakalım hafızan ne kadar kuvvetli?</p><div id="game11-game-container" class="game-area"><p><span data-lang-key="level">Seviye: </span> <b id="game11-level">1</b></p><div id="game11-board"></div></div><p id="game11-message" class="message"></p><div class="button-container"><button id="game11-start" data-lang-key="start_btn">Başla</button><button id="game11-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 12: HAFIZA KARTLARI -->
         <div id="card-game12" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game12_title">12. Hafıza Kartları</h2><p class="description" data-lang-key="game12_desc">Kapalı kartları çevirerek eşlerini bul. En az hamlede bitirerek liderlik tablosuna gir!</p><div id="game12-game-container" class="game-area"><p><span data-lang-key="moves">Hamle: </span> <b id="game12-moves">0</b><span data-lang-key="found"> | Bulunan: </span><b id="game12-found">0 / 8</b></p><div id="game12-board"></div></div><p id="game12-message" class="message"></p><div class="button-container"><button id="game12-start" data-lang-key="start_btn">Başla</button><button id="game12-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
 
         <!-- OYUN 13: MAYIN TARLASI -->
         <div id="card-game13" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game13_title">13. Mayın Tarlası</h2><p class="description" data-lang-key="game13_desc">Klasik mayın tarlası. Seviye atladıkça mayın sayısı artar. Mayına basmadan tüm boş kareleri aç!</p><div id="game13-game-container" class="game-area"><div id="game13-info"><p><span data-lang-key="level">Seviye: </span><b id="game13-level">1</b><span data-lang-key="game13_mines_left"> | Kalan Mayın: </span><b id="game13-mines-left">10</b></p></div><div id="game13-board"></div></div><p id="game13-message" class="message"></p><div class="button-container"><button id="game13-start" data-lang-key="start_btn">Başla</button><button id="game13-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- OYUN 14: DESEN HAFIZASI -->
         <div id="card-game14" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game14_title">14. Desen Hafızası</h2><p class="description" data-lang-key="game14_desc">Ekranda beliren deseni aklında tut ve aynısını işaretle. Seviye atladıkça desen karmaşıklaşır.</p><div id="game14-game-container" class="game-area"><p><span data-lang-key="level">Seviye: </span><b id="game14-level">1</b></p><div id="game14-board"></div><button id="game14-check-btn" class="hidden"><span data-lang-key="check_btn">Kontrol Et</span></button></div><p id="game14-message" class="message"></p><div class="button-container"><button id="game14-start" data-lang-key="start_btn">Başla</button><button id="game14-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
         
         <!-- YENİ OYUN 15: KAYDIRMALI BULMACA -->
         <div id="card-game15" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game15_title">15. Kaydırmalı Bulmaca</h2><p class="description" data-lang-key="game15_desc">Karışık sayıları kaydırarak 1'den 8'e kadar sırala. En az hamleyle bitirmeye çalış!</p><div id="game15-game-container" class="game-area"><p><span data-lang-key="moves">Hamle: </span><b id="game15-moves">0</b></p><div id="game15-board"></div></div><p id="game15-message" class="message"></p><div class="button-container"><button id="game15-start" data-lang-key="start_btn">Başla</button><button id="game15-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
 
         <!-- YENİ OYUN 16: YAZMA HIZI TESTİ -->
         <div id="card-game16" class="game-card">
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game16_title">16. Yazma Hızı Testi</h2><p class="description" data-lang-key="game16_desc">Verilen kelimeleri 30 saniyede hatasız yazmaya çalış. Dakikadaki kelime sayını (WPM) ölç!</p><div id="game16-game-container" class="game-area"><div id="game16-info"><p><span data-lang-key="time">Süre: </span><b id="game16-timer">30</b>s | WPM: <b id="game16-wpm">0</b></p></div><div id="game16-text-display"></div><input type="text" id="game16-input" placeholder="..." disabled autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div><p id="game16-message" class="message"></p><div class="button-container"><button id="game16-start" data-lang-key="start_btn">Başla</button><button id="game16-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
 
@@ -139,6 +184,9 @@
         <!-- YENİ OYUN 17: ARİTMETİK DEHASI -->
         <div id="card-game18" class="game-card"> <!-- ID'yi 17 olarak güncelleyebiliriz ama şimdilik böyle kalsın -->
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game18_title">17. Aritmetik Dehası</h2><p class="description" data-lang-key="game18_desc">30 saniyede olabildiğince çok matematik sorusu çöz. Her doğru cevap puan kazandırır!</p><div id="game18-game-container" class="game-area"><div id="game18-info-bar"><p><span data-lang-key="time">Süre: </span><b id="game18-timer">30</b></p><p><span data-lang-key="score">Skor: </span><b id="game18-score">0</b></p></div><div id="game18-question">? + ?</div><input type="number" id="game18-answer" data-lang-key="game18_answer_placeholder" placeholder="Cevap" disabled></div><p id="game18-message" class="message"></p><div class="button-container"><button id="game18-start" data-lang-key="start_btn">Başla</button><button id="game18-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
     
@@ -146,13 +194,16 @@
         <!-- YENİ OYUN 18: ENGELDEN KAÇIŞ -->
         <div id="card-game19" class="game-card"> <!-- ID'yi 18 olarak güncelleyebiliriz ama şimdilik böyle kalsın -->
             <button class="fullscreen-btn" aria-label="Oyunu büyüt"><svg viewBox="0 0 24 24"><path d="M5 9.5V5.5C5 5.22386 5.22386 5 5.5 5H9.5M5 14.5V18.5C5 18.7761 5.22386 19 5.5 19H9.5M19 9.5V5.5C19 5.22386 18.7761 5 18.5 5H14.5M19 14.5V18.5C19 18.7761 18.7761 19 18.5 19H14.5"/></svg></button>
+            <button class="share-btn" aria-label="Oyunu paylaş">
+            <svg viewBox="0 0 24 24"><path d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.2C16.5,7.69 17.21,8 18,8A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.8C7.5,9.31 6.79,9 6,9A3,3 0 0,0 6,15A3,3 0 0,0 9,12C9,12.24 8.96,12.47 8.91,12.7L16.04,16.85C16.56,16.38 17.24,16.08 18,16.08A3,3 0 0,0 18,22A3,3 0 0,0 21,19A3,3 0 0,0 18,16.08Z" /></svg>
+            </button>
             <button class="leaderboard-shortcut-btn" aria-label="Liderlik Tablosu"><svg viewBox="0 0 24 24"><path d="M7 21H4V7L12 3L20 7V21H17M14 21V11H10V21H14Z" /></svg></button>
             <h2 data-lang-key="game19_title">18. Engelden Kaçış</h2><p class="description" data-lang-key="game19_desc">Fare ile oyuncuyu kontrol ederek engellere çarpmadan en yüksek skoru yapmaya çalış.</p><div id="game19-game-container" class="game-area"><p><span data-lang-key="score">Skor: </span><b id="game19-score">0</b></p><div id="game19-board"><div id="game19-player"></div></div></div><p id="game19-message" class="message"></p><div class="button-container"><button id="game19-start" data-lang-key="start_btn">Başla</button><button id="game19-reset" class="hidden" data-lang-key="reset_btn">Yeniden Başla</button></div></div>
     
     </div>
 
     <footer>
-        <p data-lang-key="footer_text">Haklar saklıdır.</p>
+        <p>Created by Benender.</p>
     </footer>
 
     <!-- YENİ: FIREBASE SDK'LARI -->

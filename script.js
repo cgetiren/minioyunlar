@@ -996,6 +996,51 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // 4. YENİ: PAYLAŞ BUTONLARI
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const gameCard = btn.closest('.game-card');
+            const gameId = gameCard.id; // "card-game2" gibi tam ID'yi al
+            
+            // Temiz URL oluştur (örn: https://site.com/#card-game2)
+            const shareUrl = `${window.location.origin}${window.location.pathname}#${gameId}`;
+            
+            // Linki panoya kopyala
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                // Oyuncuya kopyalandığını bildir
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✔️';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 1500);
+            }).catch(err => {
+                console.error('Kopyalama başarısız oldu: ', err);
+            });
+        });
+    });
+
+    // 5. YENİ: SAYFA YÜKLENDİĞİNDE URL KONTROLÜ
+    function checkUrlForGame() {
+        if (window.location.hash) {
+            const gameId = window.location.hash.substring(1); // # işaretini kaldır
+            const gameCard = document.getElementById(gameId);
+            
+            if (gameCard) {
+                // Kartın olduğu yere smooth scroll yap
+                gameCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Kaydırma bitince oyunu odak modunda aç
+                setTimeout(() => {
+                    openModal(gameCard);
+                }, 700); // 700ms scroll animasyonu için bekleme süresi
+            }
+        }
+    }
+    
+    // Sayfa ilk yüklendiğinde kontrol et
+    checkUrlForGame();
+
         // Ana Buton Sesleri
         document.querySelectorAll('button').forEach(button => {
             if(button.id.includes('start') || button.id.includes('reset') || button.id.includes('check')){
