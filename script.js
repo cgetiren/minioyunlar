@@ -11,6 +11,9 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
+// YENİ: KÜFÜR FİLTRESİ LİSTESİ
+const badWords = ["küfür", "argo", "hakaret", "sakıncalı", "reklam", "anan","bacın", "sikiş", "sex", "sik", "sikmek", "göt", "got", "pipi", "sokuş", "sokmak", "yarrak", "yarak", "çük", "am", "amcık", "pıttık", "allah"]; // Burayı istediğin kelimelerle doldur
+
 // --- ÇEVİRİ SÖZLÜĞÜ ---
 const translations = {
     "tr": {
@@ -190,6 +193,19 @@ document.addEventListener('DOMContentLoaded', () => {
             
             promptEl.querySelector('button').onclick = async () => {
                 const name = input.value.trim() || (lang === 'tr' ? 'Anonim' : 'Anonymous'); // Anonim ismi de dile göre ayarlayalım
+                 // <<< YENİ KONTROL KODU BURADA BAŞLIYOR >>>
+                const isInvalid = badWords.some(word => name.toLowerCase().includes(word));
+                if (isInvalid) {
+                    input.style.borderColor = 'red'; // Hatalı girişi belirt
+                    input.value = '';
+                    input.placeholder = "Geçerli bir isim girin!";
+                    setTimeout(() => {
+                         input.style.borderColor = '';
+                         input.placeholder = placeholderText;
+                    }, 2000);
+                    return; // Kaydetme işlemini durdur
+                }
+                // <<< KONTROL KODU BURADA BİTİYOR >>>
                 promptEl.querySelector('button').disabled = true;
                 await this.addScore(gameId, name, score);
                 promptEl.remove();

@@ -491,4 +491,28 @@ footer a:hover { text-decoration: underline; }
         width: 35px;
         height: 35px;
     }
+
+        
+    h1 {
+        font-size: 2.5em; /* Ana başlığı biraz küçültelim */
+        margin-top: 50px; /* Dil butonuna yer açmak için yukarıdan boşluk bırakalım */
+    }
+
+    .language-selector {
+        top: 10px;
+        right: 10px;
+    }
+
+    #lang-btn {
+        padding: 6px 12px; /* Butonun iç boşluğunu azalt */
+        font-size: 0.9em;  /* Yazı boyutunu küçült */
+    }
+
+    .flag-icon {
+        width: 18px; /* Bayrak ikonunu küçült */
+    }
+
+    #lang-dropdown a {
+        padding: 8px 15px; /* Açılır menüdeki linklerin boşluğunu azalt */
+    }
 }
