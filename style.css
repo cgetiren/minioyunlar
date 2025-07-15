@@ -154,7 +154,7 @@ button:disabled {
 
 
 .share-btn {
-    position: absolute; top: 15px; left: 15px;
+    position: absolute; bottom: 15px; left: 15px;
     width: 36px; height: 36px; padding: 8px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%; cursor: pointer; border: none; z-index: 10;
@@ -514,5 +514,11 @@ footer a:hover { text-decoration: underline; }
 
     #lang-dropdown a {
         padding: 8px 15px; /* Açılır menüdeki linklerin boşluğunu azalt */
+    }
+
+
+    /* Mobilde köşe butonlarını gizle */
+    .fullscreen-btn {
+        display: none !important; 
     }
 }

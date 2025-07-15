@@ -41,7 +41,32 @@ const translations = {
         "game6_word_list": ["JENERATÖR", "FİLOGENETİK", "AKSİYON", "PROGRAMLAMA", "KLAVYE", "MONİTÖR", "ALGORİTMA", "SPEKTRUM", "KUVARS", "YAYINCI", "KATMAN", "ABONE"],
 
         "game16_initial_text": "Oyun başlayınca kelimeler burada belirecek.",
-        "game16_word_list": ["bir", "ve", "ama", "için", "çok", "daha", "kadar", "gibi", "sonra", "ancak", "yeni", "büyük", "küçük", "her", "zaman", "sadece", "artık", "önce", "yok", "var", "ben", "sen", "o", "biz", "siz", "onlar", "dedi", "diye", "şey", "bile", "yine", "işte", "böyle", "şöyle", "belki", "çünkü", "nasıl", "neden", "ne", "hangi", "kim", "nerede", "zaten", "aslında", "yani", "ise", "diğer", "bazı", "tüm", "üzerine", "arasında", "altında", "üstünde", "yanında", "karşısında", "içinde", "dışında", "ile", "birlikte", "hakkında", "göre", "doğru", "karşı", "başka", "tek", "ilk", "son", "ikinci", "üçüncü", "yüksek", "düşük", "iyi", "kötü", "güzel", "çirkin", "kolay", "zor", "genç", "yaşlı", "uzun", "kısa", "geniş", "dar", "ağır", "hafif", "açık", "kapalı", "dolu", "boş", "kalın", "ince", "sert", "yumuşak", "kurt", "zamanzingo", "kaos", "awp", "konteyner"]
+        "game16_word_list": ["bir", "ve", "ama", "için", "çok", "daha", "kadar", "gibi", "sonra", "ancak", "yeni", "büyük", "küçük", "her", "zaman", "sadece", "artık", "önce", "yok", "var", "ben", "sen", "o", "biz", "siz", "onlar", "dedi", "diye", "şey", "bile", "yine", "işte", "böyle", "şöyle", "belki", "çünkü", "nasıl", "neden", "ne", "hangi", "kim", "nerede", "zaten", "aslında", "yani", "ise", "diğer", "bazı", "tüm", "üzerine", "arasında", "altında", "üstünde", "yanında", "karşısında", "içinde", "dışında", "ile", "birlikte", "hakkında", "göre", "doğru", "karşı", "başka", "tek", "ilk", "son", "ikinci", "üçüncü", "yüksek", "düşük", "iyi", "kötü", "güzel", "çirkin", "kolay", "zor", "genç", "yaşlı", "uzun", "kısa", "geniş", "dar", "ağır", "hafif", "açık", "kapalı", "dolu", "boş", "kalın", "ince", "sert", "yumuşak", "kurt", "zamanzingo", "kaos", "awp", "konteyner"],
+
+
+        // --- TÜRKÇE SLUG'LAR ---
+// "tr" nesnesinin içine ekle
+"game1_slug": "kor-siralama",
+"game2_slug": "buyuk-mu-kucuk-mu",
+"game3_slug": "renk-avi",
+"game4_slug": "hizli-tiklama",
+"game5_slug": "hedef-vurma",
+"game6_slug": "kelime-tahmini",
+"game7_slug": "sayi-hafizasi",
+"game8_slug": "farki-bul",
+"game9_slug": "sirali-tiklama",
+"game10_slug": "tas-kagit-makas",
+"game11_slug": "renk-hafizasi",
+"game12_slug": "hafiza-kartlari",
+"game13_slug": "mayin-tarlasi",
+"game14_slug": "desen-hafizasi",
+"game15_slug": "kaydirmali-bulmaca",
+"game16_slug": "yazma-hizi-testi",
+"game18_slug": "aritmetik-dehasi", // ID'si 18 olan 17. oyun
+"game19_slug": "engelden-kacis",  // ID'si 19 olan 18. oyun
+    
+               
+    
     },
     "en": {
         "main_title": "PixaPlay", "start_btn": "Start", "reset_btn": "Restart", "footer_text": "All rights reserved.", "next_number": "Next Number:", "score": "Score: ","score5":"  | Score:", "score10": "Score: You ", "level": "Level: ", "moves": "Moves: ", "remaining_guesses": "Guesses Left:", "next_up": "Next:", "time": "Time: ", "time3": "  | Time:", "clicks": "Clicks:", "clicks4": "  | Clicks", "found": " | Found: ", "check_btn": "Check", "player": "You", "cpu": " CPU", "leaderboard_title": "Leaderboard", "leaderboard_empty": "No scores yet! Be the first!", "leaderboard_input_placeholder": "Your Name", "bigger": "Bigger", "game_win_congrats": "Congratulations, you won!",
@@ -68,7 +93,29 @@ const translations = {
         "game6_word_list": ["GENERATOR", "EVOLUTION", "KEYBOARD", "MONITOR", "ALGORITHM", "SPECTRUM", "JAVASCRIPT", "DEVELOPER", "DATABASE", "FIREBASE", "FUNCTION", "VARIABLE"],
 
         "game16_initial_text": "Words will appear here when the game starts.",
-        "game16_word_list": ["the", "be", "to", "of", "and", "a", "in", "that", "have", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"]
+        "game16_word_list": ["the", "be", "to", "of", "and", "a", "in", "that", "have", "it", "for", "not", "on", "with", "he", "as", "you", "do", "at", "this", "but", "his", "by", "from", "they", "we", "say", "her", "she", "or", "an", "will", "my", "one", "all", "would", "there", "their", "what", "so", "up", "out", "if", "about", "who", "get", "which", "go", "me", "when", "make", "can", "like", "time", "no", "just", "him", "know", "take", "people", "into", "year", "your", "good", "some", "could", "them", "see", "other", "than", "then", "now", "look", "only", "come", "its", "over", "think", "also", "back", "after", "use", "two", "how", "our", "work", "first", "well", "way", "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"],
+
+
+        // --- İNGİLİZCE SLUG'LAR ---
+// "en" nesnesinin içine ekle
+"game1_slug": "blind-sort",
+"game2_slug": "higher-or-lower",
+"game3_slug": "color-hunt",
+"game4_slug": "cps-test",
+"game5_slug": "aim-trainer",
+"game6_slug": "hangman",
+"game7_slug": "number-memory",
+"game8_slug": "find-the-difference",
+"game9_slug": "reaction-time",
+"game10_slug": "rock-paper-scissors",
+"game11_slug": "color-memory",
+"game12_slug": "memory-match",
+"game13_slug": "minesweeper",
+"game14_slug": "pattern-memory",
+"game15_slug": "sliding-puzzle",
+"game16_slug": "typing-test",
+"game18_slug": "arithmetic-genius",
+"game19_slug": "dodge",
     }
 };
 
@@ -1034,46 +1081,69 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(animation);
         }
 
-        // 4. YENİ: PAYLAŞ BUTONLARI
-    document.querySelectorAll('.share-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const gameCard = btn.closest('.game-card');
-            const gameId = gameCard.id; // "card-game2" gibi tam ID'yi al
-            
-            // Temiz URL oluştur (örn: https://site.com/#card-game2)
-            const shareUrl = `${window.location.origin}${window.location.pathname}#${gameId}`;
-            
-            // Linki panoya kopyala
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                // Oyuncuya kopyalandığını bildir
-                const originalText = btn.innerHTML;
-                btn.innerHTML = '✔️';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 1500);
-            }).catch(err => {
-                console.error('Kopyalama başarısız oldu: ', err);
+        // 4. YENİ: PAYLAŞ BUTONLARI (GÜNCELLENDİ)
+        document.querySelectorAll('.share-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const gameCard = btn.closest('.game-card');
+                const gameId = gameCard.id; // "card-game2"
+                const lang = document.documentElement.lang; // Mevcut dili al (tr, en)
+
+                // Oyunun "slug" (URL dostu metin) karşılığını çeviriden bul
+                const gameKey = gameId.replace('card-', '') + '_slug'; // "card-game2" -> "game2_slug"
+                const gameSlug = translations[lang][gameKey] || gameId; // Eğer çeviri yoksa, eski ID'yi kullan
+
+                // Temiz URL oluştur (örn: https://site.com/#renk-avi?lang=tr)
+                const shareUrl = `${window.location.origin}${window.location.pathname}#${gameSlug}?lang=${lang}`;
+                
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    const originalContent = btn.innerHTML;
+                    btn.innerHTML = '✔️';
+                    setTimeout(() => { btn.innerHTML = originalContent; }, 1500);
+                }).catch(err => {
+                    console.error('Kopyalama başarısız oldu: ', err);
+                });
             });
         });
-    });
 
-    // 5. YENİ: SAYFA YÜKLENDİĞİNDE URL KONTROLÜ (GÜNCELLENDİ)
-    function checkUrlForGame() {
-            if (window.location.hash && window.location.hash.startsWith('#card-game')) {
-                const gameId = window.location.hash.substring(1);
-                const gameCard = document.getElementById(gameId);
+        // 5. YENİ: SAYFA YÜKLENDİĞİNDE URL KONTROLÜ (GÜNCELLENDİ)
+        function checkUrlForGame() {
+            const url = new URL(window.location.href);
+            const hash = url.hash.substring(1); // # işaretini kaldır (örn: "renk-avi?lang=tr")
+            const cleanHash = hash.split('?')[0]; // Sadece oyun adını al (örn: "renk-avi")
+            const langParam = url.searchParams.get('lang'); // ?lang=en parametresini al
+
+            // Önce dili ayarla (eğer URL'de varsa)
+            if (langParam === 'en' || langParam === 'tr') {
+                setLanguage(langParam);
+            }
+
+            if (cleanHash) {
+                let targetGameCard = null;
                 
-                if (gameCard) {
-                    // Kendi akıcı kaydırma fonksiyonumuzu çağırıyoruz
-                    // 1000 milisaniye (1 saniye) sürecek bir animasyon
-                    const scrollDuration = 1000;
-                    smoothScrollTo(gameCard, scrollDuration);
+                // Gelen "slug" hangi oyuna ait, onu bul
+                // Önce Türkçe slug'ları kontrol et
+                let foundGameNumber = Object.keys(translations.tr).find(key => translations.tr[key] === cleanHash)?.match(/\d+/)?.[0];
+                
+                // Eğer bulunamadıysa, İngilizce slug'ları kontrol et
+                if (!foundGameNumber) {
+                    foundGameNumber = Object.keys(translations.en).find(key => translations.en[key] === cleanHash)?.match(/\d+/)?.[0];
+                }
 
-                    // Kaydırma bittikten sonra odak modunu aç
+                if (foundGameNumber) {
+                    targetGameCard = document.getElementById(`card-game${foundGameNumber}`);
+                } else {
+                    // Geriye dönük uyumluluk için eski ID sistemini de kontrol et
+                    targetGameCard = document.getElementById(cleanHash);
+                }
+
+                if (targetGameCard) {
+                    const scrollDuration = 1000;
+                    smoothScrollTo(targetGameCard, scrollDuration);
+
                     setTimeout(() => {
-                        openModal(gameCard);
-                    }, scrollDuration + 100); // Kaydırma süresinden biraz sonra
+                        openModal(targetGameCard);
+                    }, scrollDuration + 100);
                 }
             }
         }
