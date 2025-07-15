@@ -961,6 +961,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', () => langDropdown.classList.add('hidden'));
         langDropdown.addEventListener('click', (e) => { e.preventDefault(); const langLink = e.target.closest('a'); if (langLink?.dataset.lang) setLanguage(langLink.dataset.lang); });
 
+        // Sayfa yüklendiğinde dili ayarla
+        setLanguage(localStorage.getItem('language') || 'en');
+
         // Tam Ekran
         document.querySelectorAll('.fullscreen-btn').forEach(btn => { btn.addEventListener('click', (e) => { e.stopPropagation(); openModal(btn.closest('.game-card')); }); });
         modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });

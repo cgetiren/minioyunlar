@@ -172,7 +172,7 @@ button:disabled {
     border-radius: 50%; cursor: pointer; border: none; z-index: 10;
 }
 
-.leaderboard-shortcut-btn svg { width: 100%; height: 100%; fill: var(--text-color); stroke: none; }
+.leaderboard-shortcut-btn svg { fill: var(--text-color); stroke: none; }
 .leaderboard-shortcut-btn:hover { background: rgba(255, 255, 255, 0.2); }
 
 #modal-overlay {
