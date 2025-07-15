@@ -11,11 +11,6 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// YENİ: APP CHECK BAŞLATMA
-const appCheck = firebase.appCheck(app);
-appCheck.activate(
-  '6LdJKIMrAAAAAPEA2cxKhtBcJx8IS2zlfRQsLUXf', // Adım 2'de aldığın "Site Key" buraya gelecek
-  true);
 
 // YENİ: KÜFÜR FİLTRESİ LİSTESİ
 const badWords = ["küfür", "argo", "hakaret", "sakıncalı", "reklam", "anan","bacın", "sikiş", "sex", "sik", "sikmek", "göt", "got", "pipi", "sokuş", "sokmak", "yarrak", "yarak", "çük", "am", "amcık", "pıttık", "allah"]; // Burayı istediğin kelimelerle doldur
