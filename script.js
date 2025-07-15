@@ -11,6 +11,12 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
+// YENİ: APP CHECK BAŞLATMA
+const appCheck = firebase.appCheck(app);
+appCheck.activate(
+  '6LdJKIMrAAAAAPEA2cxKhtBcJx8IS2zlfRQsLUXf', // Adım 2'de aldığın "Site Key" buraya gelecek
+  true);
+
 // YENİ: KÜFÜR FİLTRESİ LİSTESİ
 const badWords = ["küfür", "argo", "hakaret", "sakıncalı", "reklam", "anan","bacın", "sikiş", "sex", "sik", "sikmek", "göt", "got", "pipi", "sokuş", "sokmak", "yarrak", "yarak", "çük", "am", "amcık", "pıttık", "allah"]; // Burayı istediğin kelimelerle doldur
 
@@ -236,7 +242,17 @@ document.addEventListener('DOMContentLoaded', () => {
             gameCard.appendChild(promptEl);
             
             const input = promptEl.querySelector('input');
+
+            // <<< YENİ EKLENEN BÖLÜM BURASI >>>
+            // 1. Kayıtlı oyuncu ismini localStorage'dan al
+            const savedName = localStorage.getItem('playerName');
+            if (savedName) {
+                input.value = savedName; // 2. Eğer varsa, input'u doldur
+            }
+            // <<< YENİ BÖLÜM BİTTİ >>>
+
             input.focus();
+            input.select(); // Input'un içindeki metni seçili hale getir, kolayca silinebilsin
             
             promptEl.querySelector('button').onclick = async () => {
                 const name = input.value.trim() || (lang === 'tr' ? 'Anonim' : 'Anonymous'); // Anonim ismi de dile göre ayarlayalım
@@ -254,6 +270,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 // <<< KONTROL KODU BURADA BİTİYOR >>>
                 promptEl.querySelector('button').disabled = true;
+
+                // <<< YENİ EKLENEN SATIR BURASI >>>
+                // 3. Yeni girilen ismi localStorage'a kaydet
+                localStorage.setItem('playerName', name);
+
                 await this.addScore(gameId, name, score);
                 promptEl.remove();
                 this.displayLeaderboard(gameId, gameCard, resetBtn, name, score);
