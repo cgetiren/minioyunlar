@@ -19,7 +19,7 @@ const badWords = ["küfür", "argo", "hakaret", "sakıncalı", "reklam", "anan",
 const translations = {
     "tr": {
         "page_title": "MiniTap - Hızlı ve Eğlenceli Oyunlar",
-        "main_title": "PixaPlay", "start_btn": "Başla", "reset_btn": "Yeniden Başla", "footer_text": "Tüm hakları saklıdır.", "next_number": "Sıradaki Sayı:", "score": "Skor: ", "level": "Seviye:", "moves": "Hamle: ", "remaining_guesses": "Kalan Hak:", "next_up": "Sıradaki:", "time": "Süre: ", "clicks": "Tıklama:", "found": "Bulunan:", "check_btn": "Kontrol Et", "player": "Sen", "cpu": "Bilgisayar", "leaderboard_title": "Liderlik Tablosu", "leaderboard_empty": "Henüz skor yok! İlk sen ol!", "leaderboard_input_placeholder": "İsminiz", "bigger": "Büyük", "game_win_congrats": "Tebrikler, kazandın!",
+        "main_title": "PixaPlay", "start_btn": "Başla", "reset_btn": "Yeniden Başla", "footer_text": "Tüm hakları saklıdır.", "next_number": "Sıradaki Sayı: ", "score": "Skor: ", "score5":"  | Skor:", "level": "Seviye: ", "moves": "Hamle: ", "remaining_guesses": "Kalan Hak:", "next_up": "Sıradaki:", "time": "Süre: ", "time3": "  | Süre:", "clicks": "Tıklama:", "clicks4": "  | Tıklama: ", "found": " | Bulunan: ", "check_btn": "Kontrol Et", "player": "Sen", "cpu": " Bilgisayar", "leaderboard_title": "Liderlik Tablosu", "leaderboard_empty": "Henüz skor yok! İlk sen ol!", "leaderboard_input_placeholder": "İsminiz", "bigger": "Büyük", "game_win_congrats": "Tebrikler, kazandın!",
         "game1_title": "1. Kör Sıralama", "game1_desc": "1-50 arası 10 sayıyı, küçükten büyüğe sırala. Yeni gelen sayı hiçbir yere sığmazsa kaybedersin!", "game1_msg_no_fit": "Sayı sığmıyor!",
         "game2_title": "2. Büyük mü, Küçük mü?", "game2_desc": "Sıradaki sayının (1-50 arası) ekrandaki sayıdan büyük mü küçük mü olduğunu tahmin et.", "game2_btn_higher": "Büyük", "game2_btn_lower": "Küçük", "game2_msg_wrong_1": "Yanlış! Sayı", "game2_msg_wrong_2": "idi. Final skor:",
         "game3_title": "3. Renk Avı", "game3_desc": "Hedef renkteki kutuya olabildiğince hızlı tıkla! Ama dikkat et, yazının rengi seni yanıltabilir!", "game3_target": "Hedef:", "game3_msg_wrong": "Yanlış! Final Skor:", "game3_msg_timeout": "Süre bitti! Final Skor:",
@@ -72,7 +72,7 @@ const translations = {
     },
     "en": {
         "page_title": "MiniTap - Quick & Fun Games",
-        "main_title": "PixaPlay", "start_btn": "Start", "reset_btn": "Restart", "footer_text": "All rights reserved.", "next_number": "Next Number:", "score": "Score: ","score5":"  | Score:", "score10": "Score: You ", "level": "Level: ", "moves": "Moves: ", "remaining_guesses": "Guesses Left:", "next_up": "Next:", "time": "Time: ", "time3": "  | Time:", "clicks": "Clicks:", "clicks4": "  | Clicks", "found": " | Found: ", "check_btn": "Check", "player": "You", "cpu": " CPU", "leaderboard_title": "Leaderboard", "leaderboard_empty": "No scores yet! Be the first!", "leaderboard_input_placeholder": "Your Name", "bigger": "Bigger", "game_win_congrats": "Congratulations, you won!",
+        "main_title": "PixaPlay", "start_btn": "Start", "reset_btn": "Restart", "footer_text": "All rights reserved.", "next_number": "Next Number: ", "score": "Score: ","score5":"  | Score:", "score10": "Score: You ", "level": "Level: ", "moves": "Moves: ", "remaining_guesses": "Guesses Left:", "next_up": "Next:", "time": "Time: ", "time3": "  | Time:", "clicks": "Clicks:", "clicks4": "  | Clicks", "found": " | Found: ", "check_btn": "Check", "player": "You", "cpu": " CPU", "leaderboard_title": "Leaderboard", "leaderboard_empty": "No scores yet! Be the first!", "leaderboard_input_placeholder": "Your Name", "bigger": "Bigger", "game_win_congrats": "Congratulations, you won!",
         "game1_title": "1. Blind Sort", "game1_desc": "Sort 10 numbers from 1-50. You lose if the new number doesn't fit anywhere!", "game1_msg_no_fit": "The number doesn't fit!",
         "game2_title": "2. Higher or Lower?", "game2_desc": "Guess if the next number (1-50) is higher or lower than the one on screen.", "game2_btn_higher": "Higher", "game2_btn_lower": "Lower", "game2_msg_wrong_1": "Wrong! The number was", "game2_msg_wrong_2": ". Final score:",
         "game3_title": "3. Color Hunt", "game3_desc": "Click the box with the target color as fast as you can! But beware, the color of the text might trick you!", "game3_target": "Target:", "game3_msg_wrong": "Wrong! Final Score:", "game3_msg_timeout": "Time's up! Final Score:",
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sound2: new Audio('mixkit-negative-tone-interface-tap.wav'), sound3: new Audio('mixkit-click-error.wav'), sound4: new Audio('mixkit-arcade-game-jump-coin.wav')
     };
     Object.values(sounds).forEach(s => s.volume = 0.5); // Genel ses seviyesi
-    sounds.hover.volume = 0.2; sounds.sound1.volume = 0.1; sounds.sound3.volume = 0.04; sounds.sound4.volume = 0.05;
+    sounds.hover.volume = 0.1; sounds.sound1.volume = 0.1; sounds.sound3.volume = 0.04; sounds.sound4.volume = 0.05; sounds.click.volume = 0.2;
 
     // --- DİL SİSTEMİ ---
     const langBtn = document.getElementById('lang-btn');
@@ -244,16 +244,23 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const input = promptEl.querySelector('input');
 
-            // <<< YENİ EKLENEN BÖLÜM BURASI >>>
-            // 1. Kayıtlı oyuncu ismini localStorage'dan al
+            // <<< YENİ VE EN ÖNEMLİ KISIM BURASI >>>
+            // Cihazın dokunmatik olup olmadığını kontrol et
+            const isTouchDevice = () => {
+                return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+            }
+
             const savedName = localStorage.getItem('playerName');
             if (savedName) {
-                input.value = savedName; // 2. Eğer varsa, input'u doldur
+                input.value = savedName;
             }
-            // <<< YENİ BÖLÜM BİTTİ >>>
 
-            input.focus();
-            input.select(); // Input'un içindeki metni seçili hale getir, kolayca silinebilsin
+            // Sadece dokunmatik olmayan (masaüstü) cihazlarda focus yap
+            if (!isTouchDevice()) {
+                input.focus();
+                input.select();
+            }
+            // <<< DEĞİŞİKLİK BİTTİ >>>
             
             promptEl.querySelector('button').onclick = async () => {
                 const name = input.value.trim() || (lang === 'tr' ? 'Anonim' : 'Anonymous'); // Anonim ismi de dile göre ayarlayalım
@@ -1175,12 +1182,26 @@ document.addEventListener('DOMContentLoaded', () => {
         checkUrlForGame();
     }, 100);
 
-        // Ana Buton Sesleri
-        document.querySelectorAll('button').forEach(button => {
-            if(button.id.includes('start') || button.id.includes('reset') || button.id.includes('check')){
-                button.addEventListener('click', () => { if (!button.disabled) sounds.click.play(); });
+            document.querySelectorAll('button').forEach(button => {
+            // Sadece belirli butonlar için tıklama ve hover sesleri ekle
+            const isGameButton = button.id.includes('start') || 
+                                 button.id.includes('reset') || 
+                                 button.id.includes('check') ||
+                                 button.id === 'lang-btn';
+
+            if (isGameButton) {
+                button.addEventListener('click', () => {
+                    if (!button.disabled) {
+                        sounds.click.play(); // veya istediğin başka bir tıklama sesi
+                    }
+                });
+
+                button.addEventListener('mouseenter', () => {
+                    if (!button.disabled) {
+                        sounds.hover.play();
+                    }
+                });
             }
-            button.addEventListener('mouseenter', () => { if (!button.disabled) sounds.hover.play(); });
         });
     }
 

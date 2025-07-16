@@ -217,6 +217,33 @@ button:disabled {
 .leaderboard-overlay h3 { color: var(--header-color); }
 /* style.css */
 
+/* LİDERLİK TABLOSU İSİM GİRİŞİ STİLLERİ */
+.leaderboard-prompt {
+    display: flex;
+    gap: 8px; /* Buton ve input arası boşluk */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    z-index: 5; /* Diğer elementlerin üstünde kalsın */
+}
+.leaderboard-prompt input {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1em;
+    width: 50%;
+    max-width: 150px;
+}
+.leaderboard-prompt button {
+    padding: 8px; /* Buton boyutunu ayarla */
+    min-width: 44px; /* Butonun kare gibi durmasını sağla */
+    font-size: 1.2em; /* İkon boyutunu ayarla */
+}
+
 .leaderboard-overlay ol {
     margin: 0;
     padding-left: 20px; /* veya 0 eğer numaraları tamamen sola dayamak istersen */
@@ -477,6 +504,22 @@ footer a:hover { text-decoration: underline; }
         height: 350px;                         /* Alanın yüksekliğini ayarla */
         max-width: 200px;                      /* Genişliği daralt */
     }
+
+    /* Sadece mobilde, Kör Sıralama kartının minimum yüksekliğini artır */
+    #card-game1 {
+        min-height: 850px; 
+    }
+
+    /* Kör sıralama oyunundaki mesajın konumunu mobilde düzelt */
+    #card-game1 .message {
+        position: absolute;
+        bottom: 110px; /* Butonların hemen üstüne konumlandır */
+        left: 0;
+        right: 0;
+        margin: 0 auto; /* Yatayda ortala */
+        width: 100%;
+    }
+
     .slot-container {
         /* Numaralandırmayı daha okunaklı yap */
         font-size: 1em;
@@ -500,12 +543,13 @@ footer a:hover { text-decoration: underline; }
     }
 
     .language-selector {
+        position: absolute;
         top: 10px;
         right: 10px;
     }
 
     #lang-btn {
-        padding: 6px 12px; /* Butonun iç boşluğunu azalt */
+        padding: 4px 10px; /* Butonun iç boşluğunu azalt */
         font-size: 0.9em;  /* Yazı boyutunu küçült */
     }
 
@@ -521,5 +565,44 @@ footer a:hover { text-decoration: underline; }
     /* Mobilde köşe butonlarını gizle */
     .fullscreen-btn {
         display: none !important; 
+    }
+
+        /* YENİ: Mobilde köşe butonlarının boyutunu ve konumunu ayarla */
+    .share-btn {
+        bottom: 10px;
+        left: 10px;
+    }
+    .leaderboard-shortcut-btn {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .share-btn, .leaderboard-shortcut-btn {
+        width: 30px;  /* Genişliği 36px'ten 32px'e düşürdük */
+        height: 30px; /* Yüksekliği 36px'ten 32px'e düşürdük */
+        padding: 7px; /* İç boşluğu 8px'ten 7px'e düşürdük */
+    }
+
+    /* YENİ: Mobilde liderlik prompt'unu küçült ve konumlandır */
+    .leaderboard-prompt {
+        padding: 5px 0;
+        margin-top: 8px;
+        margin-bottom: 35px;
+        gap: 5px;
+    }
+    .leaderboard-prompt input {
+        font-size: 0.9em;
+        padding: 6px 8px;
+    }
+    .leaderboard-prompt button {
+        padding: 6px;
+        min-width: 38px;
+        font-size: 1em;
+    }
+
+    /* Mobilde kartların üzerine gelme (hover) efektini iptal et */
+    .game-card:hover {
+        transform: none; /* Herhangi bir hareket (translateY) olmasın */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Gölge efekti sabit kalsın */
     }
 }
