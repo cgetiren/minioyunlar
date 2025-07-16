@@ -66,6 +66,9 @@ const translations = {
 "game16_slug": "yazma-hizi-testi",
 "game18_slug": "aritmetik-dehasi", // ID'si 18 olan 17. oyun
 "game19_slug": "engelden-kacis",  // ID'si 19 olan 18. oyun
+
+        "terms_link": "Hizmet Koşulları",
+        "privacy_link": "Gizlilik Politikası"
     
                
     
@@ -119,6 +122,12 @@ const translations = {
 "game16_slug": "typing-test",
 "game18_slug": "arithmetic-genius",
 "game19_slug": "dodge",
+
+            "terms_link": "Terms of Service",
+            "privacy_link": "Privacy Policy"
+
+
+
     }
 };
 

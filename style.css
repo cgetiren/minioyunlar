@@ -414,10 +414,32 @@ button:disabled {
 .obstacle { width: 20px; background-color: var(--lose-color); position: absolute; }
 
 
-/* FOOTER STİLLERİ */
-footer { width: 100%; text-align: center; padding: 40px 20px 20px 20px; margin-top: 50px; border-top: 1px solid var(--border-color); color: #888; font-size: 0.9em; }
-footer a { color: var(--primary-hover); text-decoration: none; font-weight: bold; }
-footer a:hover { text-decoration: underline; }
+/* style.css dosyasının en altına ekle */
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border-color);
+    color: #888;
+    font-size: 0.9em;
+}
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
 
 
 .leaderboard-prompt button.glowing {
