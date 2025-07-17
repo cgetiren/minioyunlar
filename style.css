@@ -550,7 +550,7 @@ footer p.credits a:hover {
 
     /* Sadece mobilde, Kör Sıralama kartının minimum yüksekliğini artır */
     #card-game1 {
-        min-height: 850px; 
+        min-height: 810px; 
     }
 
     /* Kör sıralama oyunundaki mesajın konumunu mobilde düzelt */
