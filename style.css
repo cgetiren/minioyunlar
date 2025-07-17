@@ -440,6 +440,21 @@ footer {
     text-decoration: underline;
 }
 
+/* style.css dosyasının en altına ekle */
+
+footer p.credits {
+    font-size: 0.8em;
+    color: #a0a0a0;
+    margin: 5px 0 15px 0; /* Üst ve alt boşlukları ayarla */
+}
+footer p.credits a {
+    color: var(--primary-hover);
+    text-decoration: none;
+}
+footer p.credits a:hover {
+    text-decoration: underline;
+}
+
 
 
 .leaderboard-prompt button.glowing {

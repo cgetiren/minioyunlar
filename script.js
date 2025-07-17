@@ -125,6 +125,7 @@ const translations = {
 
             "terms_link": "Terms of Service",
             "privacy_link": "Privacy Policy"
+            
 
 
 
