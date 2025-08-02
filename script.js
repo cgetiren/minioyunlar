@@ -80,7 +80,7 @@ const translations = {
         "game2_title": "2. Higher or Lower?", "game2_desc": "Guess if the next number (1-50) is higher or lower than the one on screen.", "game2_btn_higher": "Higher", "game2_btn_lower": "Lower", "game2_msg_wrong_1": "Wrong! The number was", "game2_msg_wrong_2": ". Final score:",
         "game3_title": "3. Color Hunt", "game3_desc": "Click the box with the target color as fast as you can! But beware, the color of the text might trick you!", "game3_target": "Target:", "game3_msg_wrong": "Wrong! Final Score:", "game3_msg_timeout": "Time's up! Final Score:",
         "game4_title": "4. CPS Test", "game4_desc": "Click the area as many times as you can in 10 seconds! Your Clicks Per Second (CPS) will be measured.", "game4_click_to_start": "Click to start", "game4_click": "CLICK!", "game4_msg_finished": "Finished!", "game4_msg_cps": "CPS",
-        "game5_title": "5. Aim Trainer", "game5_desc": "Try to shoot the randomly appearing red targets for 30 seconds. Each hit is 1 point!", "game5_msg_timeout": "Time's up! Final score:",
+        "game5_title": "5. Aim Trainer", "game5_desc": "Try to shoot the randomly appearing red targets for 20 seconds. Each hit is 1 point!", "game5_msg_timeout": "Time's up! Final score:",
         "game6_title": "6. Hangman", "game6_desc": "Classic hangman. Click the letters to find the secret word. You only have 6 wrong guesses.", "game6_msg_lost": "You lost! The word was:",
         "game7_title": "7. Number Memory", "game7_desc": "Memorize the sequence of numbers and enter it correctly using the keypad. How many digits can you remember?", "game7_msg_memorize": "Memorize the number...", "game7_msg_your_turn": "Now, your turn!", "game7_msg_wrong": "Wrong! The correct one was:", "game7_msg_level_complete": "completed.",
         "game8_title": "8. Find the Difference", "game8_desc": "Find the one square with a different color. It gets harder with each round!", "game8_msg_wrong": "Wrong! Game over at level", "game8_msg_level_end": ". Score:",
@@ -326,12 +326,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 playerRowId = scores.findIndex(s => s.name === currentPlayerName && s.score === newPlayerScore);
             }
             
+            // <<< GÜVENLİK GÜNCELLEMESİ BURADA BAŞLIYOR >>>
             let listItems = scores.map((s, i) => {
                 const isPlayer = (i === playerRowId);
                 const scoreFormatted = s.score.toFixed(s.score % 1 !== 0 ? 2 : 0);
-                return `<li class="${isPlayer ? 'player-score' : ''}"><span>${i + 1}. ${s.name}</span><span>${scoreFormatted}</span></li>`;
-            }).join('');
 
+                // GÜVENLİ YÖNTEM: Kullanıcı adını önce bir text node olarak oluşturup
+                // HTML etiketlerini etkisiz hale getiriyoruz.
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = `${i + 1}. ${s.name}`; // Bu komut, <img..> etiketini metne çevirir.
+
+                const scoreSpan = document.createElement('span');
+                scoreSpan.textContent = scoreFormatted;
+
+                // Şimdi güvenli hale getirilmiş HTML'i oluşturuyoruz.
+                return `<li class="${isPlayer ? 'player-score' : ''}">${nameSpan.outerHTML}${scoreSpan.outerHTML}</li>`;
+            }).join('');
+            // <<< GÜVENLİK GÜNCELLEMESİ BURADA BİTİYOR >>>
             // Başlık için çeviriyi kullan
             overlay.innerHTML = `<h3>${titleText}</h3><ol>${listItems}</ol>`;
             
