@@ -1,4 +1,5 @@
-/* --- KATMAN TEMASI & GENEL STİLLER --- */
+/* ---  GENEL STİLLER --- */
+/* Last updated: 2024 */
 :root {
     --bg-color: #1c1a27; /* Görsel yüklenmezse görünecek renk */
     --card-bg: #252836; /* Kart arkaplanı */
@@ -18,8 +19,8 @@ body {
     
     background-color: var(--bg-color); 
     background-image: 
-        url('background-top.png'),      /* Üst katman: Logolu görsel */
-        url('background-pattern.png');  /* Alt katman: Tekrar eden desen */
+        url('background-top.png'),      /* Üst BOLGE: Logolu görsel */
+        url('background-pattern.png');  /* Alt BOLGE: Tekrar eden desen */
     background-position:
         top center,                     /* Logolu görsel üstte ve ortada */
         top left;                       /* Desen en soldan başlasın */

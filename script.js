@@ -1,4 +1,5 @@
 // --- FIREBASE BAĞLANTISI ---
+// Last updated: 2024
 const firebaseConfig = {
   apiKey: "AIzaSyAAhIt2inp7oeQ_3gnT2bFArzEpBTm6Tfo",
   authDomain: "mobiloyunapp-d8901.firebaseapp.com",
@@ -41,7 +42,7 @@ const translations = {
         "game19_title": "18. Engelden Kaçış", "game19_desc": "Fare ile oyuncuyu kontrol ederek engellere çarpmadan en yüksek skoru yapmaya çalış.", "game19_msg_lose": "Çarptın! Final Skor:",
         
         // --- OYUN 6: KELİME TAHMİNİ ---
-        "game6_word_list": ["JENERATÖR", "FİLOGENETİK", "AKSİYON", "PROGRAMLAMA", "KLAVYE", "MONİTÖR", "ALGORİTMA", "SPEKTRUM", "KUVARS", "YAYINCI", "KATMAN", "ABONE"],
+        "game6_word_list": ["JENERATÖR", "FİLOGENETİK", "AKSİYON", "PROGRAMLAMA", "KLAVYE", "MONİTÖR", "ALGORİTMA", "SPEKTRUM", "KUVARS", "YAPAY", "KITAP", "ADAMAK"],
 
         "game16_initial_text": "Oyun başlayınca kelimeler burada belirecek.",
         "game16_word_list": ["bir", "ve", "ama", "için", "çok", "daha", "kadar", "gibi", "sonra", "ancak", "yeni", "büyük", "küçük", "her", "zaman", "sadece", "artık", "önce", "yok", "var", "ben", "sen", "o", "biz", "siz", "onlar", "dedi", "diye", "şey", "bile", "yine", "işte", "böyle", "şöyle", "belki", "çünkü", "nasıl", "neden", "ne", "hangi", "kim", "nerede", "zaten", "aslında", "yani", "ise", "diğer", "bazı", "tüm", "üzerine", "arasında", "altında", "üstünde", "yanında", "karşısında", "içinde", "dışında", "ile", "birlikte", "hakkında", "göre", "doğru", "karşı", "başka", "tek", "ilk", "son", "ikinci", "üçüncü", "yüksek", "düşük", "iyi", "kötü", "güzel", "çirkin", "kolay", "zor", "genç", "yaşlı", "uzun", "kısa", "geniş", "dar", "ağır", "hafif", "açık", "kapalı", "dolu", "boş", "kalın", "ince", "sert", "yumuşak", "kurt", "zamanzingo", "kaos", "awp", "konteyner"],
