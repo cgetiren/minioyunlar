@@ -1,11 +1,12 @@
 // --- FIREBASE BAĞLANTISI ---
 const firebaseConfig = {
-  apiKey: "AIzaSyBtBH3bA3oqv1WL9Y3BL3Zwyd0-hSBUCGc",
-  authDomain: "pixaplay-liderlik.firebaseapp.com",
-  projectId: "pixaplay-liderlik",
-  storageBucket: "pixaplay-liderlik.appspot.com",
-  messagingSenderId: "192235562122",
-  appId: "1:192235562122:web:42cc3dc72e44b924e47973"
+  apiKey: "AIzaSyAAhIt2inp7oeQ_3gnT2bFArzEpBTm6Tfo",
+  authDomain: "mobiloyunapp-d8901.firebaseapp.com",
+  projectId: "mobiloyunapp-d8901",
+  storageBucket: "mobiloyunapp-d8901.firebasestorage.app",
+  messagingSenderId: "428742309507",
+  appId: "1:428742309507:web:56c4973123c82376eb4db6",
+  measurementId: "G-60P536K7KC"
 };
 
 const app = firebase.initializeApp(firebaseConfig);
@@ -18,7 +19,7 @@ const badWords = ["küfür", "argo", "hakaret", "sakıncalı", "reklam", "anan",
 // --- ÇEVİRİ SÖZLÜĞÜ ---
 const translations = {
     "tr": {
-        "page_title": "MiniTap - Hızlı ve Eğlenceli Oyunlar",
+        "page_title": "MiniOyunlar - Hızlı ve Eğlenceli Oyunlar",
         "main_title": "PixaPlay", "start_btn": "Başla", "reset_btn": "Yeniden Başla", "footer_text": "Tüm hakları saklıdır.", "next_number": "Sıradaki Sayı: ", "score": "Skor: ", "score5":"  | Skor:", "level": "Seviye: ", "moves": "Hamle: ", "remaining_guesses": "Kalan Hak:", "next_up": "Sıradaki:", "time": "Süre: ", "time3": "  | Süre:", "clicks": "Tıklama:", "clicks4": "  | Tıklama: ", "found": " | Bulunan: ", "check_btn": "Kontrol Et", "player": "Sen", "cpu": " Bilgisayar", "leaderboard_title": "Liderlik Tablosu", "leaderboard_empty": "Henüz skor yok! İlk sen ol!", "leaderboard_input_placeholder": "İsminiz", "bigger": "Büyük", "game_win_congrats": "Tebrikler, kazandın!",
         "game1_title": "1. Kör Sıralama", "game1_desc": "1-50 arası 10 sayıyı, küçükten büyüğe sırala. Yeni gelen sayı hiçbir yere sığmazsa kaybedersin!", "game1_msg_no_fit": "Sayı sığmıyor!",
         "game2_title": "2. Büyük mü, Küçük mü?", "game2_desc": "Sıradaki sayının (1-50 arası) ekrandaki sayıdan büyük mü küçük mü olduğunu tahmin et.", "game2_btn_higher": "Büyük", "game2_btn_lower": "Küçük", "game2_msg_wrong_1": "Yanlış! Sayı", "game2_msg_wrong_2": "idi. Final skor:",
@@ -74,7 +75,7 @@ const translations = {
     
     },
     "en": {
-        "page_title": "MiniTap - Quick & Fun Games",
+        "page_title": "MiniOyunlar - Quick & Fun Games",
         "main_title": "PixaPlay", "start_btn": "Start", "reset_btn": "Restart", "footer_text": "All rights reserved.", "next_number": "Next Number: ", "score": "Score: ","score5":"  | Score:", "score10": "Score: You ", "level": "Level: ", "moves": "Moves: ", "remaining_guesses": "Guesses Left:", "next_up": "Next:", "time": "Time: ", "time3": "  | Time:", "clicks": "Clicks:", "clicks4": "  | Clicks", "found": " | Found: ", "check_btn": "Check", "player": "You", "cpu": " CPU", "leaderboard_title": "Leaderboard", "leaderboard_empty": "No scores yet! Be the first!", "leaderboard_input_placeholder": "Your Name", "bigger": "Bigger", "game_win_congrats": "Congratulations, you won!",
         "game1_title": "1. Blind Sort", "game1_desc": "Sort 10 numbers from 1-50. You lose if the new number doesn't fit anywhere!", "game1_msg_no_fit": "The number doesn't fit!",
         "game2_title": "2. Higher or Lower?", "game2_desc": "Guess if the next number (1-50) is higher or lower than the one on screen.", "game2_btn_higher": "Higher", "game2_btn_lower": "Lower", "game2_msg_wrong_1": "Wrong! The number was", "game2_msg_wrong_2": ". Final score:",

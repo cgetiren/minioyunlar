@@ -1,8 +1,7 @@
-# MiniTap 🎮
+# MiniOyunlar 🎮
 
-**MiniTap**, tarayıcı üzerinden oynanabilen 18 farklı mini oyundan oluşan bir koleksiyondur. Refleks, hafıza, hız ve strateji gibi farklı yetenekleri test eden bu oyunlarla keyifli vakit geçirebilir ve skorlarınızı global liderlik tablosuna kaydedebilirsiniz.
+**MiniOyunlar**, tarayıcı üzerinden oynanabilen 18 farklı mini oyundan oluşan bir koleksiyondur. Refleks, hafıza, hız ve strateji gibi farklı yetenekleri test eden bu oyunlarla keyifli vakit geçirebilir ve skorlarınızı global liderlik tablosuna kaydedebilirsiniz.
 
-**[➡️ Oyunu Oynamak İçin Tıkla!](https://www.minitap.app/)**
 
 ---
 
@@ -27,7 +26,7 @@ Bu proje aşağıdaki teknolojiler kullanılarak geliştirilmiştir:
 ## 🚀 Başlangıç
 
 Eğer projeyi kendi bilgisayarınızda çalıştırmak isterseniz:
-1.  Bu depoyu klonlayın: `git clone https://github.com/EnderKorkmaz/MiniTap.git`
+1.  Bu depoyu klonlayın: `git clone https://github.com/EnderKorkmaz/MiniOyunlar.git`
 2.  `index.html` (veya `oyundeneme.html`) dosyasını tarayıcınızda açın.
 
 ## 🤝 Katkıda Bulunma
@@ -36,4 +35,4 @@ Proje ile ilgili hata bildirimleri veya yeni oyun fikirleri için "Issues" sekme
 
 ---
 
-*A project by [Ender Korkmaz](https://github.com/EnderKorkmaz).*
+*A project by [Can Getiren](https://github.com/cgetiren).*
