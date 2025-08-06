@@ -1,5 +1,4 @@
 /* ---  GENEL STİLLER --- */
-/* Last updated: 2024 */
 :root {
     --bg-color: #1c1a27; /* Görsel yüklenmezse görünecek renk */
     --card-bg: #252836; /* Kart arkaplanı */
@@ -534,6 +533,9 @@ footer p.credits a:hover {
     display: block; /* İçindeki boşlukları kaldırır */
     border-radius: 2px; /* SVG'nin köşelerini hafif yuvarla */
 }
+
+
+
 
 
 /* --- MOBİL UYUMLULUK AYARLARI --- */

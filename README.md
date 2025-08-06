@@ -1,7 +1,5 @@
 # MiniOyunlar 🎮
 
-<!-- Last updated: 2024 -->
-
 **MiniOyunlar**, tarayıcı üzerinden oynanabilen 18 farklı mini oyundan oluşan bir koleksiyondur. Refleks, hafıza, hız ve strateji gibi farklı yetenekleri test eden bu oyunlarla keyifli vakit geçirebilir ve skorlarınızı global liderlik tablosuna kaydedebilirsiniz.
 
 

@@ -1,5 +1,4 @@
 // --- FIREBASE BAĞLANTISI ---
-// Last updated: 2024
 const firebaseConfig = {
   apiKey: "AIzaSyAAhIt2inp7oeQ_3gnT2bFArzEpBTm6Tfo",
   authDomain: "mobiloyunapp-d8901.firebaseapp.com",
@@ -1246,3 +1245,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
    
 });
+

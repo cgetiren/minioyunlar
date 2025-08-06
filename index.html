@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="tr">
-<!-- Last updated: 2024 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,11 +16,127 @@
     <!-- Harici CSS Dosyası -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- ElevenLabs Convai Widget CSS -->
+    <style>
+        /* Oculta el branding del widget */
+        .elevenlabs-branding {
+            display: none !important;
+        }
+        
+        /* Widget'ı sayfada görünür yap ve açık tut */
+        elevenlabs-convai {
+            position: fixed !important;
+            top: 20px !important;
+            right: 20px !important;
+            width: 400px !important;
+            height: 600px !important;
+            z-index: 1000 !important;
+            display: block !important;
+            background: rgba(28, 26, 39, 0.95) !important;
+            border-radius: 15px !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+            backdrop-filter: blur(10px) !important;
+        }
+        
+        /* Widget'ın varsayılan gizli durumunu kaldır */
+        elevenlabs-convai[hidden] {
+            display: block !important;
+        }
+        
+        /* Widget'ın açık/kapalı durumunu kontrol eden stiller */
+        elevenlabs-convai:not([data-open="true"]) {
+            display: block !important;
+        }
+        
+        /* Mobil cihazlar için responsive tasarım */
+        @media (max-width: 768px) {
+            elevenlabs-convai {
+                width: 90vw !important;
+                height: 70vh !important;
+                top: 10px !important;
+                right: 5vw !important;
+                left: 5vw !important;
+            }
+        }
+    </style>
+    
     <!-- Firebase SDK'ları -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
+    <!-- ElevenLabs Convai Widget -->
+    <elevenlabs-convai 
+        agent-id="agent_4401k20cjqz2e9erg7x5bpn28pbr"
+        api-key="sk_a8fbaff8d6834015d02dba9322ee8b7a366e9eecdbe257b2"
+        voice-id="bqaNYmxFgK1TN7CL95PZ">
+    </elevenlabs-convai>
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <script>
+        // Widget'ı otomatik olarak açmak için güçlü bir sistem
+        function forceOpenWidget() {
+            const widget = document.querySelector('elevenlabs-convai');
+            if (widget) {
+                // Widget'ı görünür yap
+                widget.style.display = 'block';
+                widget.removeAttribute('hidden');
+                widget.style.visibility = 'visible';
+                widget.style.opacity = '1';
+                
+                // Widget'ın tüm gizli durumlarını kaldır
+                widget.classList.remove('hidden', 'closed', 'minimized');
+                widget.setAttribute('data-open', 'true');
+                
+                // Widget'ın açık olmasını sağla
+                if (typeof widget.openWidget === 'function') {
+                    widget.openWidget();
+                }
+                
+                // Widget'ın içeriğini kontrol et ve aç
+                const widgetIframe = widget.querySelector('iframe');
+                if (widgetIframe) {
+                    widgetIframe.style.display = 'block';
+                    widgetIframe.style.visibility = 'visible';
+                }
+                
+                // Widget'ın chat alanını aç
+                const chatButton = widget.querySelector('[data-testid="chat-button"], .chat-button, button');
+                if (chatButton) {
+                    chatButton.click();
+                }
+                
+                console.log('Widget zorla açıldı!');
+            }
+        }
+        
+        // Sayfa yüklendiğinde widget'ı aç
+        document.addEventListener('DOMContentLoaded', function() {
+            // İlk deneme
+            setTimeout(forceOpenWidget, 1000);
+            
+            // İkinci deneme (widget yüklenmesi için daha fazla zaman)
+            setTimeout(forceOpenWidget, 3000);
+            
+            // Üçüncü deneme (kesinlik için)
+            setTimeout(forceOpenWidget, 5000);
+            
+            // Sürekli kontrol (widget yüklenene kadar)
+            const checkInterval = setInterval(function() {
+                const widget = document.querySelector('elevenlabs-convai');
+                if (widget && widget.offsetHeight > 0) {
+                    forceOpenWidget();
+                    clearInterval(checkInterval);
+                }
+            }, 500);
+        });
+        
+        // Sayfa tamamen yüklendiğinde de kontrol et
+        window.addEventListener('load', function() {
+            setTimeout(forceOpenWidget, 1000);
+        });
+    </script>
+
     <!-- Odak Modu için Modal Alanı -->
     <div id="modal-overlay" class="hidden">
         <div id="modal-content"></div>
